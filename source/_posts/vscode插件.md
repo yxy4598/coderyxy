@@ -1,13 +1,9 @@
 ---
 title: VScode插件
-date: 21/4/8
-tags: vscode
-categories: vscode
-keywords: vscode插件
-description: 常用的vscode插件合集待补充。
-top_img: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(54).jpg
-cover: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(54).jpg
-toc: True
+categories: 工具
+tags: 工具
+toc: true
+sidebar: true
 ---
 
 # VScode插件推荐

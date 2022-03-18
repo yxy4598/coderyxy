@@ -1,14 +1,9 @@
 ---
 title: Gitee+hexo博客搭建流程
-date: 21/2/11
-tags: gitee
 categories: 博客
-keywords: hexo博客
-description: gitee+hexo博客搭建流程
-top_img: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(45).jpg
-cover: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(45).jpg
-toc: True
-
+tags: 博客
+toc: true
+sidebar: true
 ---
 # 环境变量
 

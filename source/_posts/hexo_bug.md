@@ -1,14 +1,11 @@
 ---
 title: Gitee+hexo博客搭建遇到的BUG
-date: 21/2/11
-tags: gitee
 categories: 博客
-keywords: BUG
-description: 搭建博客踩坑
-top_img: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(15).jpg
-cover: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(15).jpg
-toc: True
+tags: 博客
+toc: true # 是否启用内容索引
+sidebar: true
 ---
+
 
 # 搭建中踩的第一个坑
 

@@ -1,13 +1,9 @@
 ---
 title: 解决GitHub无法访问的问题
-date: 21/5/6
-tags: 服务器
 categories: GitHub
-keywords: GitHub
-description: 解决如何访问GitHub的问题
-top_img: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(1).jpg
-cover: https://gitee.com/billowcloud/picture_bed/raw/master/img/img%20(1).jpg
-toc: True
+tags: Github
+toc: true # 是否启用内容索引
+sidebar: true
 ---
 
 # 站长工具查询DNS
