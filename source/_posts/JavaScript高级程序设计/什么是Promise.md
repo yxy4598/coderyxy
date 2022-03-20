@@ -143,5 +143,61 @@ function requestData(url) {
 
 ### then方法
 
+- then方法是Promise对象上的一个方法：它其实是放在Promise的原型上的 Promise.prototype.then
+
+- then方法接受两个参数：
+  - fulfilled的回调函数：当状态变成fulfilled时会回调的函数；
+  - reject的回调函数：当状态变成reject时会回调的函数；
+  
+- 一个Promise的then方法是可以被多次调用的：
+
+  - 每次调用我们都可以传入对应的fulfilled回调；
+  - 当Promise的状态变成fulfilled的时候，这些回调函数都会被执行；
+
+  ```javascript
+  promise.then(res => {
+      console.log("res1: ", res)
+  })
+  promise.then(res => {
+      console.log("res2: ", res)
+  })
+  promise.then(res => {
+      console.log("res3: ", res)
+  })
+  ```
+
+- then方法本身是有返回值的，它的返回值是一个Promise，所以我们可以进行如下的链式调用：
+
+  ```javascript
+  promise.then(res => {
+  	console.log(res)
+  }).then(res => {
+  	console.log(res)
+  })
+  ```
+
+- Promise有三种状态，那么这个Promise处于什么状态呢？
+
+  - 当then方法中的回调函数本身在执行的时候，那么它处于pending状态；
+  - 当then方法中的回调函数返回一个结果时，那么它处于fulfilled状态，并且会将结果作为resolve的参数；
+    - 情况一：返回一个普通的值；
+    - 情况二：返回一个Promise；
+    - 情况三：返回一个thenable值；
+  - 当then方法抛出一个异常时，那么它处于reject状态；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
