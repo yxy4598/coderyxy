@@ -185,11 +185,180 @@ function requestData(url) {
     - 情况三：返回一个thenable值；
   - 当then方法抛出一个异常时，那么它处于reject状态；
 
+### catch方法
 
+- catch方法也是会返回一个Promise对象的，所以catch方法后面我们可以继续调用then方法或者catch方法：
 
+  ```javascript
+  promise.catch(err => {
+    console.log(err)
+    return 1 // catch方法的返回值是一个promise,使用then方法会捕获到返回值
+  }).then(res => {
+    console.log(res)
+  })
+  ```
 
+- 如果我们希望后续继续执行catch，那么需要抛出一个异常：
 
+  ```javascript
+  promise.catch(err => {
+    console.log(err)
+    throw new Error('err2 message') //抛出异常，被catch捕获
+  }).then(res => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err)
+  })
+  ```
 
+### finally方法
+
+- finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是reject状态，最终都会 被执行的代码。
+
+- finally方法是不接收参数的，因为无论前面是fulfilled状态，还是reject状态，它都会执行.
+
+  ```javascript
+  promise.then(res => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err)
+  }).finally(() => {
+    console.log("finally action")
+  })
+  ```
+
+### resolve方法
+
+- 前面的then、catch、finally方法都属于Promise的实例方法，都是存放在Promise的prototype上的。
+
+  - 下面我们认识一下Promise的类方法
+
+- 有时候我们已经有一个现成的内容了，希望将其转成Promise来使用，这个时候我们可以使用 Promise.resolve 方 法来完成。
+
+  - Promise.resolve的用法相当于new Promise，并且执行resolve操作：
+
+    ```javascript
+    Promise.resolve("coderyxy")
+    //相当于
+    new Promise((resolve => resolve("coderyxy")))
+    ```
+
+- resolve参数的形态：
+
+  - 情况一：参数是一个普通的值或者对象
+  - 情况二：参数本身是Promise
+  - 情况三：参数是一个thenable
+
+### reject方法
+
+- reject方法类似于resolve方法，只是会将Promise对象的状态设置为reject状态。
+
+- Promise.reject的用法相当于new Promise，只是会调用reject：
+
+  ```javascript
+  Promise.reject("coderyxy")
+  //相当于
+  new Promise((resolve, reject) => {reject("coderyxy")})
+  ```
+
+- Promise.reject传入的参数无论是什么形态，都会直接作为reject状态的参数传递到catch的。
+
+### all方法
+
+- Promise.all
+  - 它的作用是将多个Promise包裹在一起形成一个新的Promise；
+  - 新的Promise状态由包裹的所有Promise共同决定：
+    - 当所有的Promise状态变成fulfilled状态时，新的Promise状态为fulfilled，并且会将所有Promise的返回值 组成一个数组；
+    - 当有一个Promise状态为reject时，新的Promise状态为reject，并且会将第一个reject的返回值作为参数；
+
+```javascript
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("111")
+  }, 1000)
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("222")
+    reject("err222")
+  }, 2000)
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("333")
+  }, 3000)
+})
+
+Promise.all([p1, p2, p3]).then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
+```
+
+### allSettled方法
+
+- all方法有一个缺陷：当有其中一个Promise变成reject状态时，新Promise就会立即变成对应的reject状态。
+  - 那么对于resolved的，以及依然处于pending状态的Promise，我们是获取不到对应的结果的；
+- 在ES11（ES2020）中，添加了新的API Promise.allSettled：
+  - 该方法会在所有的Promise都有结果（settled），无论是fulfilled，还是reject时，才会有最终的状态；
+  - 并且这个Promise的结果一定是fulfilled的；
+
+```javascript
+Promise.allSettled([p1, p2, p3]).then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
+```
+
+- 打印的结果：
+
+  - allSettled的结果是一个数组，数组中存放着每一个Promise的结果，并且是对应一个对象的；
+  - 这个对象中包含status状态，以及对应的value值；
+
+  ```json
+  [
+    { status: 'fulfilled', value: '111' },
+    { status: 'rejected', value: 'err222' },
+    { status: 'fulfilled', value: '333' }
+  ]
+  ```
+
+### race方法
+
+- 如果有一个Promise有了结果，我们就希望决定最终新Promise的状态，那么可以使用race方法
+  - race是竞技、竞赛的意思，表示多个Promise相互竞争，谁先有结果，那么就使用谁的结果，无论是fulfilled的结果还是rejected的结果
+
+```javascript
+Promise.race([p1, p2, p3]).then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
+```
+
+### any方法
+
+- any方法是ES12中新增的方法，和race方法是类似的：
+
+  - any方法会等到一个fulfilled状态，才会决定新Promise的状态；
+  - 如果所有的Promise都是reject的，那么也会等到所有的Promise都变成rejected状态；
+
+  ```javascript
+  Promise.any([p1, p2, p3]).then(res => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err.errors)
+    // AggregateError
+    // 这里返回的 err.errors属性会返回reject的列表
+  })
+  
+  ```
+
+- 如果所有的Promise都是reject的，那么会报一个AggregateError的错误。
 
 
 
