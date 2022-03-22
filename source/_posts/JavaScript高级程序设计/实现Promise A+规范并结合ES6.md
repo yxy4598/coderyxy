@@ -4,7 +4,6 @@ categories: JavaScript
 tags: JavaScript
 toc: true # 是否启用内容索引
 sidebar: true
-
 ---
 
 ### Promise的重要性
