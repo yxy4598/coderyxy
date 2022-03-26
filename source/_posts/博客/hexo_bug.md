@@ -9,7 +9,7 @@ sidebar: true
 
 # 搭建中踩的第一个坑
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_bug_1.png" style="zoom:80%;" />
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_bug_1.png" style="zoom:80%;" />
 
 一个hexo方便上传的配置文件憋了一天一夜也是没找到解决方法。
 

@@ -10,7 +10,7 @@ sidebar: true
 
 访问 http://tool.chinaz.com/dns/ ，在输入框中填写 github.com，然后点击检测按钮，会列出响应ip
 
-![](https://gitee.com/billowcloud/picture_bed/raw/master/blog/github_1.png)
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/old-1.png">
 
 也可以通过 https://www.ipaddress.com/ 查询 IP
 

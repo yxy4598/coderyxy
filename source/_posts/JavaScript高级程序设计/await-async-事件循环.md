@@ -224,7 +224,7 @@ async function foo() {
 
 ### 操作系统 – 进程 – 线程
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/coderyxy/blog/3.24-1.png">
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/3.24-1.png">
 
 ### 操作系统的工作方式
 

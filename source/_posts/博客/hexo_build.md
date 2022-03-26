@@ -81,7 +81,7 @@ hexo cl && hexo g && hexo s
 
 ###  注册gitee账户，并且创建仓库。
 
-![image-20210215010257285](https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_1.png)
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_1.png" style="zoom:80%;">
 
 这里仓库名称要尽量和你的**个人空间地址**保持一致，
 
@@ -124,7 +124,7 @@ ssh-keygen -t rsa -C "**@163.com"
 
 /C:/user/主用户/.ssh/id_rsa.pub 文件里
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_2.png" style="zoom:80%;" />
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_2.png" style="zoom:80%;" />
 
 粘贴此处就可以生成本机与gitee的公钥
 
@@ -183,13 +183,13 @@ hexo cl && hexo g && hexo d
 
 打开你的码云仓库找到**管理**
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_3.png" style="zoom:80%;" />
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_3.png" style="zoom:80%;" />
 
 点击   **初始化readme启用svn访问**
 
 然后就可以启动你的服务了
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_4.png" style="zoom: 80%;" />
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_4.png" style="zoom: 80%;" />
 
 
 
@@ -197,7 +197,7 @@ hexo cl && hexo g && hexo d
 
 
 
-<img src="https://gitee.com/billowcloud/picture_bed/raw/master/blog/gitee_5.png" style="zoom:80%;" />
+<img src="http://r9cax60vt.hd-bkt.clouddn.com/blog/gitee_5.png" style="zoom:80%;" />
 
 每一次上传之后都找到服务这里点击**更新**。
 
