@@ -1,5 +1,5 @@
 ---
-title: JSON-数据存储
+title: JSON
 categories: JavaScript
 tags: JavaScript
 toc: true # 是否启用内容索引
