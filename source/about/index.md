@@ -12,12 +12,12 @@ sidebar: custom
   age: 21,
   gender: '男',
   profession: 'Web Developer & Designer',
-  experience: '小白',
+  experience: '初级前端工程师',
   address: '山东省泰安市',
   education: '本科',
   github: 'https://github.com/yxy4598',
-  blog: 'http://124.221.155.96/',
-  email: 'yu.life@qq.com',
+  blog: 'https://www.coderyxy.cn/',
+  email: 'coderyxy@gmail.com',
   description: '致力于网站建设与前端用户体验设计',
 
   skills: [
