@@ -18,7 +18,7 @@ sidebar: custom
   github: 'https://github.com/yxy4598',
   blog: 'https://www.coderyxy.cn/',
   email: 'coderyxy@gmail.com',
-  description: '致力于网站建设与前端用户体验设计',
+  description: 'Any application that can be written in JavaScript, will eventually be written in JavaScript.',
 
   skills: [
     ['Html', 'Javascript', 'jQuery', 'CSS', 'ES6', 'Node'],
