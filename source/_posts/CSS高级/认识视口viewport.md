@@ -22,7 +22,7 @@ sidebar: true
 - 这些概念的区分，事实上来自ppk，他也是对前端贡献比较大的一个人（特别是在移动端浏览器）
   - https://www.quirksmode.org/mobile/viewports2.html
 
-![image-20220813165506824](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220813165506824.png)
+![image-20220813165506824](https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220813165506824.png)
 
 ### 布局视口和视觉视口
 
@@ -37,7 +37,7 @@ sidebar: true
   - 那么显示在可见区域的这个视口，就是视觉视口（visual viewport）
 - 在Chrome上按shift+鼠标左键可以进行缩放。
 
-<img src="C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220813181006646.png" alt="image-20220813181006646" style="zoom:67%;" />
+<img src="https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220813181006646.png" alt="image-20220813181006646" style="zoom:67%;" />
 
 ### 理想视口（ideal viewport）
 
@@ -49,4 +49,4 @@ sidebar: true
   - 我们可以对layout viewport进行宽度和缩放的设置，以满足正常在一个移动端窗口的布局；
   - 这个时候可以设置meta中的viewport；
 
-![image-20220813181211055](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220813181211055.png)
+![image-20220813181211055](https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220813181211055.png)

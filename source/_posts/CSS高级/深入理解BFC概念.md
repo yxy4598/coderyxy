@@ -14,6 +14,10 @@ sidebar: true
 
 ![image-20220812164658578](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220812164658578.png)
 
+<img src="https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220812164658578.png">
+
+
+
 - 块级元素的布局属于Block Formatting Context（BFC）
   - 也就是block level box都是在BFC中布局的；
 - 行内级元素的布局属于Inline Formatting Context（IFC）
@@ -25,7 +29,7 @@ sidebar: true
 
 - block level box都是在BFC中布局的，那么这个BFC在哪里呢？
 
-![image-20220812170358674](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220812170358674.png)
+![image-20220812170358674](https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220812170358674.png)
 
 - MDN上有整理出在哪些具体的情况下会创建BFC：
   - 根元素（）
@@ -43,7 +47,7 @@ sidebar: true
 
 - 我们来看一下官方文档对BFC作用的描述：
 
-![image-20220812170523213](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220812170523213.png)
+![image-20220812170523213](https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220812170523213.png)
 
 - 简单概况如下：
   - 在BFC中，box会在<span style="color: red;">垂直方向上一个挨着一个</span>的排布；
@@ -61,7 +65,7 @@ sidebar: true
   - <span style="color: red;">The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.</span>
   - 那么如果我们让两个box是不同的BFC呢？那么就可以解决折叠问题。
 
-![image-20220812170837023](C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220812170837023.png)
+![image-20220812170837023](https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220812170837023.png)
 
 ### BFC的作用二：解决浮动高度塌陷（权威）
 
@@ -84,4 +88,4 @@ sidebar: true
 
 - 这是官方文档对解决浮动问题的解答
 
-  <img src="C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20220812171109695.png" alt="image-20220812171109695" style="zoom:90%;" />
+  <img src="https://coderyxy-1304887606.cos.ap-nanjing.myqcloud.com/blog%2Fimage-20220812171109695.png" alt="image-20220812171109695" style="zoom:90%;" />
