@@ -57,3 +57,42 @@ var curriedLogNow = curriedLog(new Date())
 curriedLogNow("DEBUG")("嘿嘿发现了一个bug哦~")
 ```
 
+### 组合函数
+
+- 需要考虑更加复杂的情况：比如传入了更多的函数，在调用compose函数时，传入了更多的参数：
+
+```js
+function compose(...fns) {
+  var length = fns.length;
+  for (const fn of fns) {
+    if (typeof fn !== "function") {
+      throw new TypeError("Expected a function")
+    }
+  }
+  // 取出所有的函数一次调用
+  return function(...args) {
+    var index = 0;
+    var result = length ? fns[index].apply(this, args) : args
+    while(++index < length) {
+      result = fns[index].call(this, result)
+    }
+    return result
+  }
+}
+```
+
+- 测试组合函数
+
+```js
+function double(num) {
+  return num * 2
+}
+
+function square(num) {
+  return num ** 2
+}
+
+var calcFn = compose(square, double)
+console.log(calcFn(10)) // 200
+```
+
