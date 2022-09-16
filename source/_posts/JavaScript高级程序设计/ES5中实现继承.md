@@ -1,7 +1,7 @@
 ---
 title: ES5实现继承
 categories: JavaScript
-tags: JavaScript 原型链
+tags: [JavaScript, 原型链]
 toc: true # 是否启用内容索引
 sidebar: true
 ---
